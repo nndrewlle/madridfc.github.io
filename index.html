@@ -1,40 +1,163 @@
-<html> 
+<!DOCTYPE html>
+<html>
 
-    <head> 
-      <title>Tacoro</title> 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0Z1L8CC9M"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+<head>
+    <title>Heart Football Club - About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Poppins:ital,wght@0,500;1,400&display=swap');
 
-          gtag('config', 'G-Z0Z1L8CC9M');
-        </script>
-    </head> 
-    
-    <style> 
-        
-        h1{
-        
-        font-color: blue;
+        * {
+            transition: 500ms ease;
         }
-        
-        #txt {
-        
-            font-size: 100px; 
+
+        html {
+            scroll-behavior: smooth;
         }
-        
-        
-        
+
+        .bg-primary {
+            background: linear-gradient(45deg, #EB5757, #000000);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 1rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        nav a {
+            color: #EB5757;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 500;
+        }
+
+        p {
+
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: .95rem;
+        }
+
+        footer p {
+            margin: 0;
+            color: white;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+        }
     </style>
- 
-     <body> 
-       <h1>This is Taco website for you</h1>
-         <div id = 'txt'> 
-             Taco is originated from the Mexico. Is one of the delights that contains grounded meat....... 
-         </div>
-        
-     </body>
+</head>
+
+<body>
+    <header class="bg-primary text-white py-3">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="#">Heart Football Club</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="intro.html">Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Product</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-3">
+        <section>
+            <div class="row">
+                <div class="col-md-8">
+                    <img alt="Three men playing soccer during the heart football club's club activity"
+                        src="https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                    <h1 class="h2">About Heart Football Club</h1>
+                    <p class="">Heart Football Club is a professional football club based in the heart of the city.
+                        Our team is dedicated to playing at the highest level and competing for championships. Our
+                        mission is to bring joy and excitement to our fans, and to promote the sport of football in our
+                        community.</p>
+                    <p>We were founded in 2005 and have since become one of the most successful football clubs in the
+                        country. We have won multiple championships and have a loyal following of fans who support us
+                        every step of the way.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h4">Our Players</h2>
+                    <p>Our team consists of some of the most talented football players in the world. Our players come
+                        from all over the globe, bringing a unique set of skills and perspectives to the game. We are
+                        proud to have such a diverse team and believe that it is one of the keys to our success.</p>
+                    <p>Each player is dedicated to their craft and works tirelessly to improve their game. They are all
+                        leaders on and off the field.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="h4">Our History</h2>
+            <p>We have a rich history and are proud of our accomplishments over the years. Here are some of the
+                highlights:</p>
+            <ul>
+                <li>2005 - Founded as Heart Football Club</li>
+                <li>2008 - Won our first championship</li>
+                <li>2010 - Became the first team in the country to have a female head coach</li>
+                <li>2015 - Won our second championship</li>
+                <li>2020 - Moved to our new stadium, the Heart Arena</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="h4">Our Community</h2>
+            <p>We are committed to giving back to the community that has supported us throughout the years. Here are
+                some of the ways we are involved:</p>
+            <ul>
+                <li>Hosting free football clinics for kids</li>
+                <li>Partnering with local schools to promote fitness and healthy living</li>
+                <li>Supporting local charities and non-profits</li>
+            </ul>
+            <p>We believe that being a good community partner is just as important as winning championships on the
+                field.</p>
+        </section>
+
+    </main>
+
+    <footer class="bg-primary py-3">
+        <div class="container">
+            <p class="text-center">&copy; 2023 Heart Football Club</p>
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.3/dist/umd/popper.min.js"
+        integrity="sha384-Ld/t/1LOfL+ApCzXOrvMgsMeC+pUxavNloNj6UMLa6RkCX31s/BmsRpF4o4IYfsj" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
 
 </html>
