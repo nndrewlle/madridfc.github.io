@@ -1,0 +1,128 @@
+/* * {
+    margin: 0px;
+    padding: 5px;
+}
+
+body {
+
+    background-color: whitesmoke;
+    width: 1820px;
+}
+
+
+
+
+
+header {
+
+
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: aliceblue;
+    background-color: crimson;
+    margin-right: 210px;
+    margin-top: -5px;
+    height: 140px;
+    width: 1843px;
+
+}
+
+.nav {
+
+    margin-top: 10px;
+    background-color: palevioletred;
+    height: 60px;
+    width: 1843px;
+    font-size: 50px;
+    font-family: consolas;
+
+}
+
+section {
+
+    margin-top: 10px;
+    background-color: darksalmon;
+    height: 600px;
+    width: 1843px;
+}
+
+.sec1 {
+
+    margin-top: -5px;
+    margin-left: -5px;
+    background-color: indianred;
+    height: 600px;
+    width: 320px;
+
+}
+
+.sec2 {
+
+    margin-top: -610px;
+    margin-left: 1520px;
+    background-color: indianred;
+    height: 600px;
+    width: 320px;
+
+
+}
+
+footer {
+
+    margin-top: 10px;
+    background-color: darkseagreen;
+    height: 60px;
+    width: 1843px;
+
+}
+
+#firstbutton {
+
+    font-size: 200px;
+    color: white;
+}
+
+.home {
+
+    font-size: 50px;
+    font-family: consolas;
+    color: white;
+    text-decoration: none;
+    background-color: palevioletred;
+    margin-left: 325px;
+    text-indent: center;
+
+
+}
+
+.intro {
+
+    font-size: 50px;
+    color: white;
+    text-decoration: none;
+    background-color:palevioletred;
+    margin-left: 100px;
+
+}
+
+.product {
+
+    font-size: 50px;
+    color: white;
+    text-decoration: none;
+    background-color:palevioletred;
+    margin-left: 100px;
+    
+    
+}
+
+.about {
+
+    font-size: 50px;
+    color: white;
+    text-decoration: none;
+    background-color:palevioletred;
+    margin-left: 100px;
+    
+} */
