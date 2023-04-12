@@ -6,16 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Add Bootstrap CSS -->
-    
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0Z1L8CC9M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-Z0Z1L8CC9M');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0Z1L8CC9M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z0Z1L8CC9M');
+    </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
@@ -65,9 +65,75 @@
         .navbar-brand {
             font-size: 2rem;
         }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
     </style>
     <!-- Add meta tags -->
-    <meta name="description" content="Learn about Madrid Football Club and their mission to bring joy and excitement to fans while promoting the sport of football in the community.">
+    <meta name="description"
+        content="Learn about Madrid Football Club and their mission to bring joy and excitement to fans while promoting the sport of football in the community.">
     <meta name="keywords" content="Madrid Football Club, Football, Sports, Championships, Players">
 </head>
 
@@ -83,24 +149,28 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="#intro">Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#history">History</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#players">Players</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#slideshow">Images</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="products.html">Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#players">Players</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#history">History</a>
-                        </li>
-                         <li class="nav-item">
                             <a class="nav-link" href="#comm">Community</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="madridfc.html">About<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="madridfc.html">About</a>
                         </li>
                     </ul>
                 </div>
@@ -112,10 +182,35 @@
         <section>
             <div class="row">
                 <div class="col-md-8">
-                    <img alt="Three men playing soccer during the heart football club's club activity"
-                        src="https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                    <h1 class="h2">About Madrid Football Club</h1>
-                    <p class="intro">Madrid Football Club is a professional football club based in the metropolitan of the city.
+
+                    <div id="slideshow">
+
+                        <div class="mySlides fade">
+                            <img src="https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="MadridFC.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="Football.jpg" style="width:100%">
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+
+                    <h1 id="intro">About Madrid Football Club</h1>
+                    <p class="">Madrid Football Club is a professional football club based in the metropolitan of the
+                        city.
                         Our team is dedicated to playing at the highest level and competing for championships. Our
                         mission is to bring joy and excitement to our fans, and to promote the sport of football in our
                         community.</p>
@@ -124,7 +219,7 @@
                         every step of the way.</p>
                 </div>
                 <div class="col-md-4">
-                    <h2 class="players">Our Players</h2>
+                    <h2 id="players">Our Players</h2>
                     <p>Our team consists of some of the most talented football players in the world. Our players come
                         from all over the globe, bringing a unique set of skills and perspectives to the game. We are
                         proud to have such a diverse team and believe that it is one of the keys to our success.</p>
@@ -135,7 +230,7 @@
         </section>
 
         <section>
-            <h2 class="history">Our History</h2>
+            <h2 id="history">Our History</h2>
             <p>We have a rich history and are proud of our accomplishments over the years. Here are some of the
                 highlights:</p>
             <ul>
@@ -148,7 +243,7 @@
         </section>
 
         <section>
-            <h2 class="comm">Our Community</h2>
+            <h2 id="comm">Our Community</h2>
             <p>We are committed to giving back to the community that has supported us throughout the years. Here are
                 some of the ways we are involved:</p>
             <ul>
@@ -178,6 +273,36 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+
+    <!-- For Image Slideshow-->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) 
+            { 
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 1500); // Change image every 2 seconds
+        }
+    </script>
+
+   
+
 </body>
 
 </html>
