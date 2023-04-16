@@ -147,22 +147,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#intro">Introduction</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="shop.html">Shop</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#history">History</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#players">Players</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#slideshow">Images</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#comm">Community</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="checkout.html">Checkout</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="madridfc.html">About</a>
@@ -174,9 +163,14 @@
     </header>
 
     <main class="container py-3">
-        <!-- create a container for the cart items and total price -->
+        <!-- create a container for the list of jerseyShorts -->
+        <div id="jerseyShorts-container"></div>
+
+        <!-- create a container for the cart items -->
         <div id="cart-container"></div>
 
+        <!-- create a button for the checkout function -->
+        <button onclick="checkout()">Checkout</button>
 
 
     </main>
@@ -199,35 +193,53 @@
         crossorigin="anonymous"></script>
 
 
-  <!-- script to display the cart items and total price -->
-<script>
-    // get the cart items from local storage
-    const cartItems = JSON.parse(localStorage.getItem("cartItems"));
-  
-    // function to display the contents of the cart and total price
-    function displayCart() {
-      const container = document.getElementById("cart-container");
-      let html = "";
-      let totalPrice = 0;
-      for (let i = 0; i < cartItems.length; i++) {
-        html += `
-          <div>
-            <img src="${cartItems[i].image}" alt="${cartItems[i].name}">
-            <h3>${cartItems[i].name}</h3>
-            <p>Price: $${cartItems[i].price}</p>
-          </div>
-        `;
-        totalPrice += cartItems[i].price;
-      }
-      html += `<h2>Total Price: $${totalPrice}</h2>`;
-      container.innerHTML = html;
-      const message = "The page is only for education purpose!"
-      alert(message);
-    }
-  
-    // call the displayCart function to display the cart items and total price on the page
-    displayCart();
-  </script>
+    <script>
+        // create an array of football club jerseyShorts with their names, images, and prices
+        const jerseyShorts = [
+            { name: "Madrid FC Jersey", image: "Jersey.jpg", price: 120 },
+            { name: "Madrid FC Shorts", image: "Shorts.png", price: 80 },
+
+        ];
+
+        // function to display the list of jerseyShorts on the website
+        function displayJerseyShorts() {
+            const container = document.getElementById("jerseyShorts-container");
+            let html = "";
+            for (let i = 0; i < jerseyShorts.length; i++) {
+                html += `
+        <div>
+          <img src="${jerseyShorts[i].image}" alt="${jerseyShorts[i].name}">
+          <h3>${jerseyShorts[i].name}</h3>
+          <p>Price: $${jerseyShorts[i].price}</p>
+          <button onclick="addToCart(${i})">Add to Cart</button>
+        </div>
+      `;
+            }
+            container.innerHTML = html;
+        }
+
+        // create an array to store the cart items
+        const cartItems = [];
+
+        // function to add an item to the cart
+        function addToCart(index) {
+            cartItems.push(jerseyShorts[index]);
+        }
+
+        // function to go to the checkout page
+        function checkout() {
+            // store the cart items in local storage so they can be accessed on the checkout page
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+            // navigate to the checkout page
+            window.location.href = "checkout.html";
+        }
+
+        // call the displayJerseyShorts function to display the list of jerseyShorts on the website
+        displayJerseyShorts();
+    </script>
+
+    </script>
+
 
 
 </body>
