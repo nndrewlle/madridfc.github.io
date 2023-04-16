@@ -147,8 +147,22 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="shop.html">Shop</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#intro">Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#history">History</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#players">Players</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#slideshow">Images</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#comm">Community</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="madridfc.html">About</a>
@@ -160,14 +174,9 @@
     </header>
 
     <main class="container py-3">
-        <!-- create a container for the list of jerseys -->
-        <div id="jerseys-container"></div>
-
-        <!-- create a container for the cart items -->
+        <!-- create a container for the cart items and total price -->
         <div id="cart-container"></div>
 
-        <!-- create a button for the checkout function -->
-        <button onclick="checkout()">Checkout</button>
 
 
     </main>
@@ -190,78 +199,35 @@
         crossorigin="anonymous"></script>
 
 
-    <!-- For Image Slideshow-->
-    <script>
-        // create an array of football club jerseys with their names, images, and prices
-        const jerseys = [
-            { name: "Madrid FC Jersey", image: "Jersey.jpg", price: 120 },
-            { name: "Madrid FC Shorts", image: "Shorts.png", price: 80 },
-            
-        ];
-
-        // function to display the list of jerseys on the website
-        function displayJerseys() {
-            const container = document.getElementById("jerseys-container");
-            let html = "";
-            for (let i = 0; i < jerseys.length; i++) {
-                html += `
-      <div>
-        <img src="${jerseys[i].image}" alt="${jerseys[i].name}">
-        <h3>${jerseys[i].name}</h3>
-        <p>Price: $${jerseys[i].price}</p>
-        <button onclick="addToCart(${i})">Add to Cart</button>
-      </div>
-    `;
-            }
-            container.innerHTML = html;
-        }
-
-        // create an array to store the cart items
-        const cartItems = [];
-
-        // function to add an item to the cart
-        function addToCart(index) {
-            cartItems.push(jerseys[index]);
-            displayCart();
-        }
-
-        // function to display the contents of the cart
-        function displayCart() {
-            const container = document.getElementById("cart-container");
-            let html = "";
-            for (let i = 0; i < cartItems.length; i++) {
-                html += `
-      <div>
-        <img src="${cartItems[i].image}" alt="${cartItems[i].name}">
-        <h3>${cartItems[i].name}</h3>
-        <p>Price: $${cartItems[i].price}</p>
-      </div>
-    `;
-            }
-            container.innerHTML = html;
-        }
-
-        // function to calculate the total price of the items in the cart
-        function calculateTotalPrice() {
-            let totalPrice = 0;
-            for (let i = 0; i < cartItems.length; i++) {
-                totalPrice += cartItems[i].price;
-            }
-            return totalPrice;
-        }
-
-        // function to checkout the items in the cart
-        function checkout() {
-             const message = `This page is for education purpuse only!`;
-            alert(message);
-          
-        }
-
-        // call the displayJerseys function to display the list of jerseys on the website
-        displayJerseys();
-
-    </script>
-
+  <!-- script to display the cart items and total price -->
+<script>
+    // get the cart items from local storage
+    const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+  
+    // function to display the contents of the cart and total price
+    function displayCart() {
+      const container = document.getElementById("cart-container");
+      let html = "";
+      let totalPrice = 0;
+      for (let i = 0; i < cartItems.length; i++) {
+        html += `
+          <div>
+            <img src="${cartItems[i].image}" alt="${cartItems[i].name}">
+            <h3>${cartItems[i].name}</h3>
+            <p>Price: $${cartItems[i].price}</p>
+          </div>
+        `;
+        totalPrice += cartItems[i].price;
+      }
+      html += `<h2>Total Price: $${totalPrice}</h2>`;
+      container.innerHTML = html;
+      const message = "The page is only for education purpose!"
+      alert(message);
+    }
+  
+    // call the displayCart function to display the cart items and total price on the page
+    displayCart();
+  </script>
 
 
 </body>
